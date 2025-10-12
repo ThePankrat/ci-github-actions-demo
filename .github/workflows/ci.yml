@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         # Define the matrix of Python versions to test against
-        python-version: ['3.7.10', '3.8', '3.9', '3.10']
+        python-version: ['3.11', '3.12', '3.9', '3.10']
 
     steps:
       - name: Print Hello Message
