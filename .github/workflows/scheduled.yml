@@ -1,0 +1,17 @@
+# This workflow runs on a schedule (daily at midnight UTC).
+name: Daily Scheduled Build
+
+on:
+  schedule:
+    # Runs at 00:00 UTC every day. The syntax is minute, hour, day, month, day-of-week.
+    - cron: '0 0 * * *'
+
+jobs:
+  daily-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Print scheduled message
+        run: echo "Scheduled build completed successfully!"
